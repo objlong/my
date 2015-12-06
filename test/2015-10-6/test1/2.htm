@@ -1,0 +1,45 @@
+	<!DOCTYPE html>
+<!-- saved from url=(0058)http://bbs.miaov.com/online_class/JS1-lesson-gif/JS16.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>无标题文档</title>
+<script type="text/javascript">
+	window.onload = function  () {
+		var tex = document.getElementById('tex');
+		var btn = document.getElementById('btn');
+		function testnum (num) {
+			if (num == "") {
+				alert("请输入QQ号码：")
+			}else if (isNaN(num)) {
+				alert("请输入一个数字");
+			}else if (num.charAt(0) == 0) {
+				alert("第一个数字不能为0");
+			}else if (num.length < 5 || num.length > 10) {
+				alert("输入的数字必须在5到10位");
+			}else if (parseInt(num) != num && isNaN(num) == 0) {
+				alert("QQ号不为小数")
+			}
+		}
+		btn.onclick = function  () {
+			testnum(tex.value)		
+		}
+	}
+</script>
+</head>
+
+<body>
+
+请输入QQ号码：<input type="text" id="tex">
+<input type="button" value="判断" id="btn">
+
+
+<br>
+1、有没有输入<br>
+2、输入的是不是数字<br>
+3、不能有0在前面<br>
+4、不能是小数<br>
+5、输入的数字必须在5位以上、10位以内<br>
+
+
+
+</body></html>

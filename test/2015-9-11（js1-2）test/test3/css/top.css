@@ -1,0 +1,119 @@
+#div1{
+	width: 500px;
+	height: 500px;
+	background-color: #F7ECEC;
+}
+/*#top{
+	position: relative;
+}*/
+/*#top input{
+	margin-top: 10px;
+	margin-left: 10px;
+	width: 75px;
+	height: 35px;
+	border-radius: 10px 10px 0 0;
+	box-shadow: 5px 0 0 rgba(0,0,0,0.1);
+	background-color: #F08726;
+
+}*/
+.btn {
+	margin-top: 10px;
+	margin-left: 10px;
+	width: 80px;
+	height: 35px;
+	border-radius: 10px 10px 0 0;
+	box-shadow: 5px 0 0 rgba(0,0,0,0.1);
+	background-color: #F08726;
+	float: left;
+	text-align: center;
+	line-height: 35px;
+	cursor: pointer;
+	color: white;
+}
+#div1 ul {
+	padding: 0px;
+}
+#div1 li{
+	list-style-type: none;
+}
+#list {
+	position: absolute;
+	top: 55px;
+	margin-left: 10px;
+	width: 400px;
+	height: 400px;
+	background-color: white;
+	border-radius: 0 10px 10px 10px;
+	box-shadow: 5px 0 0 rgba(0,0,0,0.1);
+}
+#list ul{
+	padding: 0px;
+}
+#list .list_a{
+	width: 400px;
+	height: 200px;
+	list-style-type: none;
+	float: left;
+}
+#list .list_a .list_img{
+	width: 200px;
+	height: 150px;
+	float: left;
+	border-radius: 10px 10px 10px 10px;
+}
+#list2 {
+	position: absolute;
+	top: 55px;
+	margin-left: 10px;
+	width: 400px;
+	height: 400px;
+	background-color: white;
+	border-radius: 0 10px 10px 10px;
+	box-shadow: 5px 0 0 rgba(0,0,0,0.1);
+}
+#list2 ul{
+	padding: 0px;
+}
+#list2 .list_a{
+	width: 400px;
+	height: 100px;
+	list-style-type: none;
+	float: left;
+}
+#list2 .list_a .list_img{
+	width: 100px;
+	height: 75px;
+	float: left;
+	border-radius: 10px 10px 10px 10px;
+	margin-top: 8px;
+}
+#list3 {
+	position: absolute;
+	top: 55px;
+	margin-left: 10px;
+	width: 400px;
+	height: 400px;
+	background-color: white;
+	border-radius: 0 10px 10px 10px;
+	box-shadow: 5px 0 0 rgba(0,0,0,0.1)
+}
+#list3 ul{;
+	padding: 0px;
+}
+#list3 .list_a{
+	width: 400px;
+	height: 50px;
+	list-style-type: none;
+	float: left;
+	border-bottom: 2px solid #000;
+}
+#list3 .list_a .list_img{
+	width: 50px;
+	height: 38px;
+	float: left;
+	border-radius: 10px 10px 10px 10px;
+	margin-top: 6px;
+}
+#list3 .list_a h2{
+	display: none;
+}

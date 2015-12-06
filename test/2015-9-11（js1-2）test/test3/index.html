@@ -1,0 +1,70 @@
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="css/top.css">
+</head>
+<body>
+<div id="div1">
+	<ul>
+		<li class="btn">大图展示</li>
+		<li class="btn">小图展示</li>
+		<li class="btn">列表展示</li>
+	</ul>
+	<div id="list">
+		<ul>
+			<li class="list_a">
+				<img src="images/1.jpg" class="list_img" />
+				<h2>气质美女</h2>
+				<p>人人都想拍出婚纱照什么的</p>
+			</li>
+			<li class="list_a">
+				<img src="images/1.jpg" class="list_img" />
+				<h2>气质美女</h2>
+				<p>人人都想拍出婚纱照什么的</p>
+			</li>
+		</ul>
+	</div>
+<!-- 	<div id="top">
+		<input type="button" value="大图展示" />
+		<input type="button" value="小图展示" />
+		<input type="button" value="列表展示" />
+	</div> -->
+	
+</div>
+<script type="text/javascript">
+var a = document.getElementsByClassName('btn');
+var b = document.getElementById('list');
+for(var i = 0; i < a.length; i++){
+	// 表头效果
+	a[i].onmouseover = function () {
+	
+		this .style.background = '#000';
+	}
+	a[i].onmouseout = function () {
+	
+		this .style.background = '#F08726';
+	}
+
+}
+// 列表展示
+a[0].onclick = function  () {
+	b.id = 'list'
+}
+a[1].onclick = function  () {
+	b.id = 'list2'
+}
+a[2].onclick = function  () {
+	b.id = 'list3'
+}
+	
+</script>
+
+
+
+
+
+
+
+
+</body>
+</html>

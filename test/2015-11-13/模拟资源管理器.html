@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        #list {
+            list-style: none;
+        }
+        .list1 li {
+            margin: 5px 0;
+            padding: 5px;
+            height: 46px;
+            line-height: 46px;
+            cursor: pointer;
+        }
+        .list1 li:hover {
+            background-color: rgb(229,243,225);
+        }
+    </style>
+
+    <script>
+
+        var filesData = [
+            {
+                name : 'DriversBackup',
+                type : '',
+                children : [
+                    {
+                        name : '1',
+                        type : ''
+                    },
+                    {
+                        name : '2.txt',
+                        type : 'txt'
+                    },
+                    {
+                        name : '2.txt',
+                        type : 'txt'
+                    }
+                ]
+            },
+            {
+                name : 'game',
+                type : ''
+            },
+            {
+                name : 'OneDrive',
+                type : '',
+                children : [
+                    {
+                        name : '1.html',
+                        type : 'html'
+                    },
+                    {
+                        name : '2.css',
+                        type : 'css'
+                    },
+                    {
+                        name : '3.css',
+                        type : 'css'
+                    }
+                ]
+            },
+            {
+                name : 'js宝典.txt',
+                type : 'txt'
+            },
+            {
+                name : 'index.html',
+                type : 'html'
+            },
+            {
+                name : 'css.css',
+                type : 'css'
+            },
+            {
+                name : '滑板鞋.wma',
+                type : 'wma'
+            }
+        ]
+        window.onload = function  () {
+            var list = document.getElementById('list');
+            add(filesData);
+            function add (data) {
+                list.innerHTML = '';
+                for (var i = 0; i < data.length; i++) {
+                    var li = document.createElement('li');
+                    li.index = i;
+                    if (data[i].type) {
+                        li.innerHTML = '<img src = "images/' + data[i].type + '.png"/>' + data[i].name;
+                    }else{
+                        li.innerHTML = '<img src = "images/folder.gif"/>'+data[i].name;
+                        li.ondblclick = function  () {
+                            if (data[this.index].children) {
+                                add(data[this.index].children);
+                            }else{
+                                alert('已经到最后一级')
+                            }
+                        }
+                    }
+                    list.appendChild(li);
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+<div id="box">
+    <ul id="list" class="list1"></ul>
+</div>
+
+</body>
+</html>

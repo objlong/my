@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		#mask{
+			color: #999;
+			position: absolute;
+			font-size: 10px;
+			cursor: text;
+		}
+	</style>
+</head>
+<body>
+	<input type="text" id="btn" />
+	<label for = 'btn' id="mask">请输入内容</label>
+	<input type="text" placeholder="请输入内容" id="btn2" />
+</body>
+</html>
+<script type="text/javascript">
+	var btn = document.getElementById('btn');
+	var mask = document.getElementById('mask');
+	mask.style.left = btn.offsetLeft + btn.clientLeft + 'px';
+	mask.style.top = btn.offsetTop + btn.clientTop + 'px';
+	btn.onkeydown = function  () {
+		mask.style.display = 'none';
+	}
+	btn.onkeyup = function  () {
+		if (btn.value == '') {
+			mask.style.display = 'block'
+		};
+	}
+	btn.onblur = function  () {
+		if (btn.value == '') {
+			mask.style.display = 'block'
+		};
+	}
+</script>

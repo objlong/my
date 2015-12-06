@@ -1,0 +1,6 @@
+动态选项卡
+    一个text
+    一个textarea
+    一个button
+    一个div
+    当点击button的时候，根据text和textarea的内容自动在div中生成一个选项卡，点击一起生成一个，并且动态生成选项卡可以切换，删除

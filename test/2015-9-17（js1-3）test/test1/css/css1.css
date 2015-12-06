@@ -1,0 +1,20 @@
+ul{
+	padding: 0px;
+	margin: 0px;
+}
+.li1{
+	position: absolute;
+	margin-top: 10px;
+	list-style-type: none;
+	width: 100px;
+	height: 100px;
+	background-color: red;
+	border: 1px solid #000;
+}
+.p1{
+	padding: 0px;
+	margin:0px;
+	text-align: center;
+	line-height: 100px;
+	font-size: 50px; 
+}

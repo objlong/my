@@ -1,0 +1,7 @@
+1.<hx><ul><p>都有默认padding和margin值
+2.li:after ?
+3.JS获取行间样式第一个值为NULL。（实际是先获取行内样式，无行内样式所以为NULL。）
+4.absolute定位都将转化为块级元素。且其定位根据浏览器或者具有定位属性的父元素来定位、
+5.可通过float脱离文本流让两个块级元素在一行内，一般不设置position:absolute relative
+6.var，function,在运行前JS会预解析，预解析只适用于当前作用域。
+7.json格式转换，外单内双，严格执行~

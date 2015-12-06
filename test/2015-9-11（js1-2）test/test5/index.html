@@ -1,0 +1,177 @@
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="css/css1.css">
+</head>
+<body>
+<div id="navigation">
+	<ul>
+		<li id = "list_a">首页</li>
+		<li class="list">服饰</li>
+		<li class="list">美容</li>
+		<li class="list">偶像</li>
+		<li class="list">乐活</li>
+		<li class="list">男士</li>
+		<li class="list">健康</li>
+		<li class="list">视觉</li>
+		<li class="list">视频</li>
+		<li class="list">活动</li>
+		<li class="list">专题</li>
+		<li class="list">分享</li>
+		<li class="list">流行</li>
+	</ul>
+</div>
+<div id="tip">
+	<ul class="tip_1">
+		<li>流行点</li>
+		<li>秀场</li>
+		<li>搭配</li>
+		<li>街拍</li>
+		<li>配饰	</li>
+		<li>一日一look</li>
+		<li>流行趋势</li>
+		<li>腕表</li>
+		<li>珠宝</li>
+	</ul>
+	<ul class="tip_1">
+		<li>新品试用</li>
+		<li>新</li>
+		<li>品</li>
+		<li>试</li>
+		<li>用</li>
+		<li>一日一look</li>
+		<li>流行趋势</li>
+		<li>腕表</li>
+		<li>珠宝</li>
+	</ul>
+	<ul class="tip_1">
+		<li>1</li>
+		<li>2</li>
+		<li>3</li>
+		<li>4</li>
+		<li>5</li>
+		<li>6</li>
+
+	</ul>
+	<ul class="tip_1">
+		<li>写</li>
+		<li>这个</li>
+		<li>好</li>
+		<li>嘛</li>
+		<li>烦</li>
+
+	</ul>
+	<ul class="tip_1">
+		<li>e</li>
+		<li>gk</li>
+		<li>g</li>
+		<li>h</li>
+		<li>i</li>
+	</ul>
+	<ul class="tip_1">
+		<li>腕</li>
+		<li>表</li>
+		<li>珠</li>
+		<li>宝</li>
+		<li>用</li>
+	</ul>
+	<ul class="tip_1">
+		<li>新品试用</li>
+		<li>新</li>
+		<li>品</li>
+		<li>试</li>
+		<li>用</li>
+		<li>一日一look</li>
+		<li>流行趋势</li>
+		<li>腕表</li>
+		<li>珠宝</li>
+	</ul>
+	<ul class="tip_1">
+		<li>7</li>
+		<li>7</li>
+		<li>7</li>
+		<li>7</li>
+		<li>7</li>
+		<li>7</li>
+		<li>7</li>
+		<li>7</li>
+		<li>7	</li>
+	</ul>
+	<ul class="tip_1">
+		<li>6</li>
+		<li>6</li>
+		<li>6</li>
+		<li>6</li>
+		<li>6</li>
+		<li>6</li>
+		<li>6</li>
+		<li>6</li>
+		<li>6</li>
+	</ul>
+	<ul class="tip_1">
+		<li>2</li>
+		<li>3</li>
+		<li>5</li>
+		<li>6</li>
+		
+	</ul>
+	<ul class="tip_1">
+		<li>yi</li>
+		<li>日</li>
+		<li>一</li>
+		<li>试</li>
+		<li>用</li>
+		<li>look</li>
+		<li>this</li>
+		
+	</ul>
+	<ul class="tip_1">
+		<li>真</li>
+		<li>的</li>
+		<li>留</li>
+		<li>行</li>
+		<li>用</li>
+		<li>一日一look</li>
+		<li>流行趋势</li>
+		<li>腕表</li>
+		<li>珠宝</li>
+	</ul>
+
+</div>
+<script type="text/javascript">
+	var a = document.getElementsByClassName('list');
+	var b = document.getElementsByClassName('tip_1');
+	var c = document.getElementById('list_a');
+	c.onmouseover = function () {
+		c.style.backgroundColor = "red" ;
+	}
+	c.onmouseout = function () {
+		c.style.backgroundColor = "#000" ;
+	}
+	for (var i = 0; i < a.length; i++) {
+		a[i].index = i;
+		b[i].index = i;
+		a[i].onmouseover = function  () {
+			this.style.backgroundColor = "red";	
+			b[this.index].style.display = "block";
+			}
+		a[i].onmouseout = function  () {
+			this.style.backgroundColor = "#000";	
+			b[this.index].style.display = "none";
+		}
+		b[i].onmouseover = function () {
+			this.style.display = "block";
+			a[this.index].style.backgroundColor = "red";	
+		}
+		b[i].onmouseout = function (){
+			this.style.display = "none";
+			a[this.index].style.backgroundColor = "#000";
+		}
+	};
+</script>
+	
+
+
+
+</body>
+</html>

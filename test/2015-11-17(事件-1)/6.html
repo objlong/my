@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		#box{
+			width: 500px;
+			height: 300px;
+			margin: 0 auto;
+			position: relative;
+			overflow: hidden;
+		}
+		#img1{
+			position: absolute;
+			width: 500px;
+			height: 300px;
+			z-index: 99;
+			left: 0px;
+			top: 0px;
+		}
+		#img2{
+			display: block;
+			width: 500px;
+			height: 300px;
+		}
+	</style>
+</head>
+<body>
+	<div id="box">
+		<img src="" id="img1" />
+		<img src="" id="img2" />
+	</div>
+</body>
+</html>
+<script type="text/javascript">
+	var box = document.getElementById('box');
+	var img1 = document.getElementById('img1');
+	var img2 = document.getElementById('img2');
+	var arr1 = [];
+	var arr2 = [];
+	var n = 0 ;
+	var timer = null ;
+	var imgs = ['1.jpg' ,'2.jpg' ,'3.jpg' ,'4.jpg' ,'5.jpg' ,'6.jpg' ,'7.jpg' ,'8.jpg' ,'9.jpg' ,'10.jpg' ]
+		fn1();
+	box.onmousedown = function  (ev) {
+		var e = ev || event;
+		arr1 = [e.clientX , e.clientY]
+		return false;
+	}
+	box.onmouseup = function  (ev) {
+		var e = ev || event;
+		arr2 = [e.clientX , e.clientY]
+		var a = arr2[0] - arr1[0];
+		var b = arr2[1] - arr1[1];
+		img1.style.transition = 'opacity 1s';
+		img1.style.opacity= '0';
+		if (a >= Math.abs(b)) {
+			move(img1,'left',10,500,fn1)
+		}else if (b >= Math.abs(a)) {
+			move(img1,'top',10,300,fn1)
+		}else if (a < 0 && Math.abs(a) > Math.abs(b)) {
+			move(img1,'left',10,-500,fn1)
+		}else if (b < 0 && Math.abs(b) > Math.abs(a)) {
+			move(img1,'top',10,-300,fn1)
+		}
+	}
+	document.onkeyup = function  (ev) {
+		var e = ev || event;
+		if (timer) {
+			return;
+		}
+		switch(e.keyCode){
+			case 37 : 
+				move(img1,'left',20,-500,fn1);
+				break;
+			case 38 : 
+				move(img1,'top',20,-300,fn1);
+				break;
+			case 39 : 
+				move(img1,'left',20,500,fn1);
+				break;
+			case 40 : 
+				move(img1,'top',20,300,fn1);
+				break;
+		}
+	}
+	function fn1 () {
+		img1.src = 'img/' + imgs[n] + '';
+		if (n == imgs.length - 1) {
+			n = -1;
+		}
+		img2.src = 'img/' + imgs[n+1] + '';
+		n++;
+		img1.style.cssText = '';
+	}
+	function move (obj,attr,speed,target,callback) {
+		var s = parseFloat(css(obj,attr));
+		timer = setInterval(function  () {
+			if (s > target) {
+				s = s - speed ;
+				obj.style[attr] = s + 'px';
+				if (s <= target) {
+					s = target;
+					obj.style[attr] =s + 'px';
+					timer = null;
+					callback && typeof callback == 'function' && callback();
+					clearInterval(timer);
+				}
+			}
+			if (s < target) {
+				s = s + speed ;
+				obj.style[attr] = s + 'px';
+				if (s >= target) {
+					s = target;
+					obj.style[attr] =s + 'px';
+					timer = null;
+					callback && typeof callback == 'function' && callback();
+					clearInterval(timer);
+				}
+			}
+		},10)
+	}
+	function css (obj,attr) {
+		if (obj.currentStyle) {
+			return obj.currentStyle[attr];
+		}else{
+			return getComputedStyle(obj)[attr];
+		}
+	}
+</script>

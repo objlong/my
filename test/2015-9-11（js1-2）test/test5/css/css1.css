@@ -1,0 +1,54 @@
+#navigation {
+	width: 1300px;
+	height: 40px;
+}
+ul{
+	padding: 0px;
+}
+#list_a {
+	width: 99px;
+	height: 40px;
+	background-color: #000;
+	float: left;
+	color: white;
+	text-align: center;
+	line-height: 40px;
+	border-right: 1px solid gray ;
+	cursor: pointer;
+	list-style-type: none;
+}
+.list {
+	width: 99px;
+	height: 40px;
+	background-color: #000;
+	float: left;
+	color: white;
+	text-align: center;
+	line-height: 40px;
+	border-right: 1px solid gray ;
+	cursor: pointer;
+	list-style-type: none;
+}
+.tip_1 {
+	width: 1300px;
+	height: 40px;
+	background-color: red;
+	margin: 0px;
+	display: none;
+
+}
+.tip_1 li {
+	width: 99px;
+	height: 30px;	
+	background-color: red;
+	float: left;
+	color: white;
+	text-align: center;
+	line-height: 30px;
+	border-right: 1px solid white ;
+	cursor: pointer;
+	list-style-type: none;
+	position: relative;
+	top: 5px;
+
+}

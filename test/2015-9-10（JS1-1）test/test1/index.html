@@ -1,0 +1,45 @@
+<html>
+<head>
+<meta charset="utf-8">
+<style type="text/css">
+	#cl {
+		color: red;
+	}
+	#div1 {
+		width: 100px;
+		height: 100px;
+		background-color: red;
+		display: none;
+	}
+</style>
+</head>
+<body>
+
+<input id="cl" type="button" value="变色">
+<div id="div1">22</div>
+<script type="text/javascript">
+	var a = document.getElementById('cl');
+		b = document.getElementById('div1');
+	a.onclick = function  () {
+		b.style.backgroundColor = "yellow" ;		
+	}
+	a.onmouseover = function  () {
+		b.style.display = "block";
+	}
+	a.onmouseout = function  () {
+		b.style.display = "none";
+		/*这真的是
+		一个注释
+		*/
+	}
+</script>
+
+
+
+
+
+
+
+
+</body>
+</html>

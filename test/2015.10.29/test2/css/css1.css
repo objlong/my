@@ -1,0 +1,52 @@
+*{
+	padding: 0px;
+	margin: 0px;
+}
+li{
+	list-style-type: none;
+}
+.box{
+	margin:0 auto;
+	width: 1204px;
+}
+.abtn{
+	height: 50px;
+	text-align: center;
+	line-height: 50px;	
+}
+.btn{
+	display: inline-block;
+	width: 120px;
+	height: 40px;
+	color: #fff;
+	background-color: #5CA4CC;
+	line-height: 37px;
+	text-align: center;
+	text-decoration: none;
+}
+ul{
+	overflow: hidden;
+	width: 1204px;
+
+}
+.tip{
+	float: left;
+	width: 280px;
+	border-left: 1px solid #E2E2E2;
+	padding: 10px;
+	margin-left: -1px;
+}
+.tip img{
+	display: block;
+	height: 180px;
+	width: 280px;
+
+}
+.tip p{
+	height: 65px;
+	text-align: center;
+	line-height: 65px;
+	color: #70B6DC;
+	font-size: 30;
+	font-weight: bold;
+}

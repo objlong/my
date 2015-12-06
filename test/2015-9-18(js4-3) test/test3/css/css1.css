@@ -1,0 +1,84 @@
+ul{
+	padding: 0px;
+	margin:0px;
+}
+li{
+	list-style-type: none;
+}
+.box{
+	width: 500px;
+	height: 500px;
+	margin: 0 auto;
+	position: relative;
+	border: 1px solid #000;
+}
+.box a{
+	
+	width: 50px;
+	height: 50px;
+	text-decoration: none;
+	font-size: 40px;
+	text-align: center;
+	line-height: 50px;
+	color: #000;
+	background:rgba(0,0,0,0.5);	
+	border-radius: 50%;
+	z-index: 1;
+}
+.btn1{
+	position: absolute;
+	top: 225px;
+	left: 10px;
+}
+.btn2{
+	position: absolute;
+	top: 225px;
+	right: 10px;
+}
+.img1{
+	position: absolute;
+	width: 500px;
+	height: 500px;
+}
+.list1{
+	position: absolute;
+	bottom:0px;
+	width: 500px;
+	text-align: center;
+}
+li div{
+	border: 10px solid transparent;
+	position: absolute;
+	top: -10px;
+	border-top-color: #ccc;
+	display: none;
+}
+li{
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	margin:0 10px;
+	border-radius: 50%;
+	background-color: #ccc;
+	position: relative;
+	bottom: 10px;
+	cursor: pointer;
+	 
+}
+li img{
+	position: absolute;
+	bottom:30px;
+	width: 100px;
+	height: 100px;
+	margin-left: -50px;
+	display: none;
+}
+.active{
+	background-color: yellow;
+}
+.active img{
+	display: block;
+}
+.active div{
+	display: block;
+}

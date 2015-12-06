@@ -1,0 +1,123 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Tab切换</title>
+<script type="text/javascript" src="http://lib.sjsh8.cn/js/jquery-1.7.1.min.js"></script>
+<style type="text/css">
+	*{
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		font-size: 12px;
+	}
+	.tab{
+		width: 298px;
+		height:98px;
+		margin: 10px;
+		border: 1px solid #eee;
+		overflow: hidden;
+	}
+	.tab_title{
+		height: 27px;
+		position: relative;
+		background: #f7f7f7;
+	}
+	.tab_title ul{
+		position: absolute;
+		width: 301px;
+		left:-1;
+	}
+	.tab_title li{
+		float: left;
+		line-height: 26px;
+		height: 26px;
+		width: 58px;
+		text-align: center;
+		padding: 0 1px;
+		overflow: hidden;
+		border-bottom: 1px solid #eee;
+	}
+	.tab li a:link,.tab_title li a:visited{
+		color: #000;
+		text-decoration: none;
+	}
+	.tab li a:hover{
+		color: #f90;
+		font-weight: 700;
+	}
+	.tab_title li.select{
+		background: #fff;
+		border-bottom-color: #fff;
+		border-left: 1px solid #eee;
+		border-right: 1px solid #eee;
+		padding: 0;
+	}
+	.tab .tab_content .tabct{
+		margin: 10px 10px 10px 19px
+	}
+	.tab .tab_content .tabct ul li{
+		float: left;
+		width: 134px;
+		height: 25px;
+		overflow: hidden;;
+	}
+	.tab_content{
+		width: 298px;
+		height: 70px;
+	}
+</style>
+<script type="text/javascript">
+$(document).ready(function(){
+	var titleName=$("#tab_title").find("li");
+	var titleContect=$("#tab_contect").find("div");
+	if(titleName.length !== titleContect.length){
+		return;
+	}
+	for(var i=0;i<titleName.length;i++)
+	{
+		titleName[i].id=i;
+		titleName.mouseover(function(){
+			titleName.attr("class","")
+			$(this).addClass("select");
+			titleContect.css("display","none");
+			titleContect[this.id].style.display="block"
+			});
+	}
+});
+function submitClick(){
+	var title = document.getElementById('text_tab').value;
+	var box = document.getElementById('text_box').value;
+	var title_tpl = document.createElement('title_tpl');
+	var box_tpl = document.createElement('box_tpl');
+	title_tpl.innerHTML = '<li><a href="#">' + title + '</a></li>';
+	box_tpl.innerHTML = '<div class="tabct" style="display:block"><ul><li><a href="#">'+ box +'</a></li></ul></div>';
+	document.getElementById('title_box').appendChild(title_tpl);
+	document.getElementById('tab_contect').appendChild(box_tpl);
+}
+</script>
+</head>
+<body>
+<input type="text" id="text_tab">
+<input type="text" id="text_box">
+<input type="submit" id="submit" onclick="submitClick()">
+<div class="tab">
+	<div class="tab_title" id="tab_title">
+		<ul id="title_box">
+			<li class="select">
+				<a href="#">公告</a>
+			</li>
+		</ul>
+	</div>
+	<div class="tab_content" id="tab_contect">
+		<div class="tabct" style="display:block">
+			<ul>
+				<li>
+					<a href="#">Tab标签切换效果</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
+</body>
+</html>

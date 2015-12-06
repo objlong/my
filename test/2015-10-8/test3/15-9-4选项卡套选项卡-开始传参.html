@@ -1,0 +1,99 @@
+﻿<!--
+分析: 鼠标移动到 左边的LI 上面的时候   传参 img TXT  控制LI2的数量和 文章内容. img地址
+直接写个函数来创建  右边的LI  可以修改fn 初始化函数来进行
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>选项卡套选项卡12</title>
+        <style>
+            *{margin: 0;padding:0;}
+            ul{list-style: none;}
+            #div1{ width:960px; height: 330px; margin: 10px auto;}
+            #ul1{ width:150px; height: 330px; background-color: #00CC33;float: left;}
+            .div2{ width:810px; height: 330px; float: right; position: relative; display: none;}
+            #ul1 li{height:24.7%;border-bottom: 1px solid #FFFFFF; background: url(imgs/bg.png) center no-repeat #bbbbbb;}
+            .ul2{height: 30px; width: 810px;background-color:#FFFFFF;position: absolute; bottom: 0; right: 0;filter:alpha(opacity=70);opacity:0.7;position: absolute}
+            .div2 img{height: 330px;width:810px; display: none;}
+            .ul2 li{width:269px; height: 30px;margin-right: 1px;background-color:#000000; color: #FFFFFF; text-align: center; line-height: 30px; float: left;}
+        </style>
+        <script>
+            window.onload=function(){
+                var aul1 = document.getElementById('ul1');
+                var ali1 = aul1.getElementsByTagName('li');
+                var div2 = document.getElementsByClassName('div2');
+                function changge (li,color,div) {
+                    for (var i = 0; i < li.length; i++) {
+                        li[i].index = i;
+                        var t = 0;
+                        li[i].onmouseover = function  () {
+                            li[t].style.backgroundColor = '';
+                            div[t].style.display = 'none';
+                            li[this.index].style.backgroundColor = color;
+                            div[this.index].style.display = 'block';
+                            t = this.index;
+                        }
+                    };
+                }
+                changge(ali1,'white',div2);
+                for (var i = 0; i < div2.length; i++) {
+                
+                changge(div2[i].getElementsByTagName('li'),'red',div2[i].getElementsByTagName('img'))
+                };
+            }
+        </script>
+
+    </head>
+    <body>
+        <div id='div1'>
+
+                <ul id="ul1">
+                    <li>1</li>
+                    <li>2</li>
+                    <li>3</li>
+                    <li>4</li>
+                </ul>
+
+            <div class='div2' style="display : block;">
+            <img src="imgs/1.jpg" style="display : block;">
+            <img src="imgs/2.jpg">
+            <img src="imgs/3.jpg">
+                <ul class="ul2">
+                    <li>第一种方法</li>
+                    <li>第一种方法</li>
+                    <li>第一种方法</li>
+                </ul>
+            </div>
+            <div class='div2'>
+            <img src="imgs/1.png" style="display : block;">
+            <img src="imgs/2.png">
+            <img src="imgs/3.png">
+                <ul class="ul2">
+                    <li>第一种方法</li>
+                    <li>第一种方法</li>
+                    <li>第一种方法</li>
+                </ul>
+            </div>
+            <div class='div2'>
+            <img src="imgs/1.jpg" style="display : block;">
+            <img src="imgs/2.jpg">
+            <img src="imgs/3.jpg">
+                <ul class="ul2">
+                    <li>第一种方法</li>
+                    <li>第一种方法</li>
+                    <li>第一种方法</li>
+                </ul>
+            </div>
+            <div class='div2'>
+            <img src="imgs/1.png" style="display : block;">
+            <img src="imgs/2.png">
+            <img src="imgs/3.png">
+                <ul class="ul2">
+                    <li>第一种方法</li>
+                    <li>第一种方法</li>
+                    <li>第一种方法</li>
+                </ul>
+            </div>
+        </div>
+    </body>
+</html>

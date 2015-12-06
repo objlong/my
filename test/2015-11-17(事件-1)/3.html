@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>放大镜</title>
+	<style type="text/css">
+		#box{
+			width: 350px;
+			height: 350px;
+			border: 1px solid #000;
+			position: relative;
+		}
+		#box2{
+			position: absolute;
+			width: 450px;
+			height: 450px;
+			left: 368px;
+			top:8px;
+			overflow: hidden;
+			border: 1px solid #000;
+			display: none;
+			background-image: url('images/2.jpg');
+			background-repeat: no-repeat;
+		}
+		#small{
+			display: block;
+		}
+		#mask{
+			width: 150px;
+			height: 150px;
+			background-color: rgba(255,255,0,.5);
+			position: absolute;
+			left: 0px;
+			top: 0px;
+			z-index: 99;
+			display: none;
+			cursor: move;
+		}
+	</style>
+</head>
+<body>
+	<div id="box">
+		<img src="images/1.jpg" id="small" />
+		<div id="mask"></div>
+	</div>
+	<div id="box2"><!-- <img src="images/2.jpg" id="big" /> --></div>
+</body>
+</html>
+<script type="text/javascript">
+	var mask = document.getElementById('mask');
+	var box = document.getElementById('box');
+	var box2 = document.getElementById('box2');
+	var big = document.getElementById('big');
+	box.onmouseout = function  () {
+		mask.style.display = '';
+		box2.style.display = '';
+	}
+	box.addEventListener('mouseover',fn1)
+	box.addEventListener('mousemove',fn1)
+	function fn1 (ev) {
+		var e = ev || event;
+		var pos = box.getBoundingClientRect();
+		var l = e.clientX - mask.offsetWidth/2 - pos.left;
+		var t = e.clientY - mask.offsetHeight/2 - pos.top;
+		var x = e.clientX/box.offsetWidth;
+		var y = e.clientY/box.offsetHeight;
+		mask.style.display = 'block';
+		box2.style.display = 'block';
+		if (l > box.clientWidth - mask.offsetWidth) {
+			l = box.clientWidth - mask.offsetWidth;
+		}else if (l < 0) {
+			l = 0;
+		} 	
+		if (t > box.clientHeight - mask.offsetHeight) {
+			t = box.clientHeight - mask.offsetHeight;
+		}else if (t < 0) {
+			t = 0;
+		}
+		mask.style.left = l + 'px';
+		mask.style.top = t + 'px';
+		box2.style.backgroundPosition = x*100 + '%'+ y*100 + '%';
+
+	}
+
+</script>

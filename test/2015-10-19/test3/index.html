@@ -1,0 +1,56 @@
+<html>
+<head>
+<meta charset="utf-8">
+<style type="text/css">
+	li{
+		float: left;
+	}
+</style>
+</head>
+<body>
+	<div>
+		<ul>
+			<li><img src="images/0.JPG" class="img"></li>
+			<li><img src="images/0.JPG" class="img"></li>
+			<li><img src="images/colon.JPG" class="point"></li>
+			<li><img src="images/0.JPG" class="img"></li>
+			<li><img src="images/0.JPG" class="img"></li>
+			<li><img src="images/colon.JPG" class="point"></li>
+			<li><img src="images/0.JPG" class="img"></li>
+			<li><img src="images/0.JPG" class="img"></li>
+		</ul>
+	</div>
+</body>
+</html>
+<script>
+	window.onload = function  () {
+		var imgs = document.getElementsByClassName('img');
+		var points = document.getElementsByClassName('point');
+		var n = 0;
+		function  fntime() {
+			var t = new Date();
+			var hours = t.getHours();
+			var mins = t.getMinutes();
+			var s = t.getSeconds();
+			var str = addZero(hours) + addZero(mins) + addZero(s);
+			for (var i = 0; i < str.length; i++) {
+				imgs[i].src = 'images/' + str.charAt(i) +'.JPG';
+			}
+			n = n > 0 ? 0 : 1;			
+			if (n == 0) {
+				for (var i = 0; i < points.length; i++) {
+					points[i].src = 'images/colon2.JPG';
+				}
+			}else if (n) {
+				for (var i = 0; i < points.length; i++) {
+					points[i].src = 'images/colon.JPG';
+				}
+			}
+		}
+		setInterval(fntime,1000)
+		function addZero (obj) {
+			return obj < 10 ? '0'+obj : ''+obj;
+			
+		}
+	}
+</script>

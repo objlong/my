@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>解决div移动</title>
+	<style type="text/css">
+		div{
+			width: 100px;
+			height: 100px;
+			position: absolute;
+			background-color: red;
+		}
+	</style>
+</head>
+<body>
+	<div id="div1"></div>
+</body>
+</html>
+<script type="text/javascript">
+	var div1 = document.getElementById('div1');
+	var left = false;
+	var right = false;
+	var Top = false; 
+	var bottom = false;
+	setInterval(function  () {
+		if (left) {
+			div1.style.left = div1.offsetLeft - 10 + 'px';
+		}else if (right) {
+			div1.style.left = div1.offsetLeft + 10 + 'px';
+		}else if (Top) {
+			div1.style.top = div1.offsetTop - 10 + 'px';
+		}else if (bottom) {
+			div1.style.top = div1.offsetTop + 10 + 'px';
+		};
+	},100)
+	document.onkeydown = function  (ev) {
+		var e = ev || event;
+		switch(e.keyCode){
+			case 37 : left = true;break;
+			case 39 : right = true;break;
+			case 38 : Top = true;break;
+			case 40 : bottom = true;break;
+		}
+	}
+	document.onkeyup = function  (ev) {
+		var e = ev || event;
+		switch(e.keyCode){
+			case 37 : left = false;break;
+			case 39 : right = false;break;
+			case 38 : Top = false;break;
+			case 40 : bottom = false;break;
+		}
+	}
+</script>
