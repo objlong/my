@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		div{
+			position: absolute;
+			background-color: green;
+			height: 100px;
+			width: 100px;
+		}
+		button{
+			position: absolute;
+			left: 300px;
+		}
+	</style>
+	<script type="text/javascript" src= 'js/jquery.js'></script>
+</head>
+<body>
+	<div></div>
+	<button>1</button>
+</body>
+</html>
+	<script type="text/javascript">
+	$("button").click(function(){
+	  var div=$("div");
+	  div.animate({height:'300px',opacity:'0.4'},"slow");
+	  div.animate({width:'300px',opacity:'0.8'},"slow");
+	  div.animate({height:'100px',opacity:'0.4'},"slow");
+	  div.animate({width:'100px',opacity:'0.8'},"slow");
+	});
+	var arr = [1,2,3,4,5]
+	arr.splice(2,0,'w')
+	console.log(arr)
+	</script>
