@@ -30,7 +30,7 @@ li{
 .menu li{
 	float: left;
 	width: 200px;
-	line-height: 110px;
+	line-height: 105px;
 	text-align: center;
 	font-size: 35px;
 	cursor: pointer;
@@ -43,7 +43,8 @@ li{
 	margin-left: 65px;
 }
 .menu li:hover{
-	text-decoration: underline;
+	/*text-decoration: underline;*/
+	border-bottom: 5px solid #F3F8F1;
 }
 .top_tag{
 	width: 130px;
