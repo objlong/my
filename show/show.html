@@ -114,26 +114,27 @@
 <body>
 	<div class = "div1">
 		<ul id="oUl">
+			<audio id='audiomedia' src= 'imgs/123.mp3' loop= 'loop' autoplay= 'autoplay'></audio>
 			<li>
-				<div><p>作品内容</p></div>
+				<div class="content"><p>作品内容</p></div>
 			</li>
 			<li>
-				<div><p>作品内容</p></div>
+				<div class="content"><p>作品内容</p></div>
 			</li>
 			<li>
-				<div><p>作品内容</p></div>
+				<div class="content"><p>作品内容</p></div>
 			</li>
 			<li>
-				<div><p>作品内容</p></div>
+				<div class="content"><p>作品内容</p></div>
 			</li>
 			<li>
-				<div><p>作品内容</p></div>
+				<div class="content"><p>作品内容</p></div>
 			</li>
 			<li>
-				<div><p>作品内容</p></div>
+				<div class="content"><p>作品内容</p></div>
 			</li>
 			<li>
-				<div><p>作品内容</p></div>
+				<div class="content"><p>作品内容</p></div>
 			</li>
 		</ul>
 	</div>
@@ -213,8 +214,50 @@
 			},900)
 		}
 	})
-//requsetNextAnimationFrame与cancelNextRequestAnimationFrame兼容性；
-window.requestNextAnimationFrame = (function () {
+
+	//音乐部分
+	var media = document.getElementById('audiomedia');
+	media.addEventListener('canplay',loading)
+	//加载音频数据
+	var audioContext, analyser, sound, arr,num, k, m, n;
+	function loading() {
+		audioContext = audioContext || new AudioContext();//新建音频数据对象
+		analyser = (analyser || audioContext.createAnalyser());//音频解码器
+		//从 `<audio>` 元素创建一个MediaElementAudioSourceNode(媒体元素音频源结点)
+		//直接操作HTMLMediaElement, 像play()和pause()的方法均可调用.
+		sound = audioContext.createMediaElementSource(media);
+		//将sound与解码器和音频对象相连
+		sound.connect(analyser);
+		sound.connect(audioContext.destination);
+		media.play();		
+		update();
+	}
+	//音频数据解析
+	function update() {
+		//二进制音频数据解析
+		arr = new Uint8Array(analyser.frequencyBinCount);
+		analyser.getByteFrequencyData(arr);
+		Active(arr);
+		if (!media.paused) {
+			requestAnimationFrame(update);
+		}
+	}
+	//动画函数
+	var adiv = document.getElementsByClassName('content');
+	    function Active(arr){
+	    	var step = Math.round(arr.length / 8); 
+	    	for( var i = 0; i < 7; i++ ){
+	    		num = arr[i * 10];
+	    		k = (num) / $('.content').eq(i).height() * 100;
+				m = 100 - k;
+				n = (m-30)>0?(m-30):0;
+				// console.log(step,num,step,k,m,n)
+	    		$('.content').eq(i).css({"-webkit-transform" : "translate3d(0," + n + "%,0) rotateY(180deg)",
+	    								"transform" : "translate3d(0,"+ n +"%,0) rotateY(180deg)"})	
+	    	}
+	    }
+//requsetAnimationFrame与cancelRequestAnimationFrame兼容性；
+window.requestAnimationFrame = (function () {
     var originalRequestAnimationFrame = undefined,
         wrapper = undefined,
         callback = undefined,
@@ -330,7 +373,7 @@ window.requestNextAnimationFrame = (function () {
 })();
 
 
-    window.cancelNextRequestAnimationFrame = window.cancelRequestAnimationFrame
+    window.cancelRequestAnimationFrame = window.cancelRequestAnimationFrame
         || window.webkitCancelAnimationFrame
         || window.webkitCancelRequestAnimationFrame
         || window.mozCancelRequestAnimationFrame

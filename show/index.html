@@ -33,7 +33,7 @@
 		<div class="page" id='page1'>
 			<div class="content" id="contentone">
 				<ul class="ability" id="ability">
-					<li><h1>掌握技能</h1></li>
+					<li class="title1">掌握技能</li>
 					<li>1.熟练应用：html(包括html5), css(包括css3), javascript(原生js, Ajax, jquery等), 有独立建站的能力。</li>
 					<li>2.初步应用：c语言， photoshop等，可编写部分程序和切图。</li>
 					<li>3.初步了解：php, mysql, nodejs等，能读懂，并对其数据进行操作。</li>
@@ -102,16 +102,15 @@
 						<p>校级荣誉：三等奖学金、一等奖学金、校级优秀学生</p>
 						<p>市级荣誉：第三届烟台市优秀志愿者</p>
 						<p>省级荣誉：省级优秀毕业生、十三届“挑战杯”三等奖</p>
-						<p>自我评价：1.一只学前端的菜鸟一只，本页面代码编写略仓促，有错误请大神指正。</p>
-						<p>2.大学毕业一年，一直从事汽车设计工作，略有涉猎单片机，但因兴趣从大学起一直在前端方面，
-						实在无法忍受不喜欢的工作，故转行。</p>
+						<p>自我评价：1.前端的菜鸟一只，本页面代码编写略仓促，有错误请大神指正。</p>
+						<p>2.自大学起一直对前端有浓厚兴趣，自学能力较好。</p>
 						<p>3.二次元+前端技术重度爱好者，跳跃思维+逻辑思维，
 						既有天马行空的想象，又有工科男慎密的逻辑能力。</p>
 					</div>
 				</div>
 			</div>
 		</div>
-		<div class="bottom_tag2">
+		<div class="bottom_tag2" id="bottom_tag2">
 			<img src="imgs/bottom2.png" />
 		</div>
 	</div>
@@ -136,11 +135,11 @@
 			$('#container').css('marginTop' , marginTop);
 		}
 		if ($('.page').width() <= 960) {
-			$('#top_tag').css({'marginLeft' : 415,
+			$('#top_tag, #bottom_tag2').css({'marginLeft' : 415,
 			  'marginRight' : 415
 			})
 		}else{
-			$('#top_tag').css('margin' , '')
+			$('#top_tag, #bottom_tag2').css('margin' , '')
 		}
 	})
 

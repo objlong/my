@@ -144,10 +144,10 @@ li{
 	line-height: 40px;
 	font-size: 25px;
 }
-.ability h1{
+.ability .title1{
 	text-align: center;
 	display: block;
-	margin:0 10px;
+	margin:10px 0;
 }
 #page2{
 	background-color: #D7ECF1;
@@ -253,7 +253,6 @@ li{
 	background-image: url(../imgs/paper.jpg);
 	background-repeat: no-repeat;
 	float: left;
-	text-align: center;
 	font-size: 18px;
 	color: #220F01;
 	position: relative;
@@ -261,7 +260,7 @@ li{
 }
 .inform p{
 	padding: 0 10px;
-	margin: 5px;
+	margin: 10px;
 }
 .inform1{
 	transform:rotateY(180deg);
@@ -278,6 +277,7 @@ li{
 .inform .title{
 	margin-top: 10px;
 	margin-bottom: 20px;
+	text-align: center;
 }
 #personal_introduce{
 	display: none;
