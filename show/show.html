@@ -146,7 +146,7 @@
 <body>
 	<div class="mask" id="mask">
 		<p>请使用最新版本高级浏览器食用此网页，网页正在加载，请等待。。。</p>
-		<input type="button" value="立即进入，也许会很丑(⊙﹏⊙)b">
+		<input type="button" value="立即进入，也许会很丑(⊙﹏⊙)b" onclick="this.parentNode.style.display = 'none'">
 	</div>
 	<div class = "div1">
 		<ul id="oUl">
@@ -226,20 +226,6 @@
 </html>
 <script type="text/javascript" src="js/jquery.js"></script>
 <script type="text/javascript">
-	//由于图片较多，页面加载需要时间，增加蒙版
-	var cur = 5;
-	var timer2 = setInterval(function (){
-		$('#mask p').html('请使用最新版本高级浏览器食用此网页，网页正在加载，请等待。。。' + cur);
-		cur--;
-		if (cur == 0) {
-			$('#mask').css('display', 'none');
-			clearInterval(timer2);
-		}
-	},1000)
-	$('#mask input').click(function(){
-		clearInterval(timer2);
-		$('#mask').css('display', 'none');
-	})
 	var W = $('.div1').outerWidth();
 	var L = $('.div1').offset().left;
 	//动画效果；
@@ -493,4 +479,7 @@ window.requestAnimationFrame = (function () {
         || window.oCancelRequestAnimationFrame
         || window.msCancelRequestAnimationFrame
         || clearTimeout;
+    setTimeout(function (){
+    	$('#mask').css('display' , 'none');
+    },5000 )
 </script>
