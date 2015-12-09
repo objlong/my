@@ -152,8 +152,10 @@
 			cancelAnimationFrame(timer);
 			$('#oUl div').attr("style" , "")
 		}
+		onoff = false;
 	}
 	function move (ev) {
+		onoff = true;
 		if (onoff) {
 			var e = ev || event ;
 			var X = e.pageX;
@@ -173,11 +175,15 @@
 				}
 			})
 		}
+		console.log(onoff)
 	}
-	$('#oUl').mousemove(move);
+	// var oUl = document.getElementById('oUl');
+	// oUl.onmousemove = move;
+	var Mousemove = $('#oUl').mousemove(move);
 	$('#oUl').mouseout(out);
+	// console.log($('#oUl').mouseover() = null)
 	//放大翻转效果
-	var onoff = true ;
+	var onoff = false ;
 	$('#oUl').click(function  (ev) {
 		cancelAnimationFrame(timer);
 		var e = ev || event ; 
@@ -204,6 +210,8 @@
 				}
 				target.parent().addClass('lager');
 			}	
+			// oUl.onmousemove = null;
+			Mousemove.unbind('mousemove');
 			onoff = false ; 
 		}else{
 			$('.div1').removeAttr('id');
@@ -212,14 +220,16 @@
 			setTimeout(function  () {
 				onoff = true ; 
 			},900)
+			// oUl.onmousemove = move;
+			Mousemove = $('#oUl').mousemove(move);
 		}
 	})
 
 	//音乐部分
 	var media = document.getElementById('audiomedia');
+	var audioContext, analyser, sound, arr,num, k, m, n;
 	media.addEventListener('canplay',loading)
 	//加载音频数据
-	var audioContext, analyser, sound, arr,num, k, m, n;
 	function loading() {
 		audioContext = audioContext || new AudioContext();//新建音频数据对象
 		analyser = (analyser || audioContext.createAnalyser());//音频解码器
@@ -244,7 +254,8 @@
 	}
 	//动画函数
 	var adiv = document.getElementsByClassName('content');
-	    function Active(arr){
+	function Active(arr){
+		if (!onoff) {
 	    	var step = Math.round(arr.length / 8); 
 	    	for( var i = 0; i < 7; i++ ){
 	    		num = arr[i * 10];
@@ -256,6 +267,7 @@
 	    								"transform" : "translate3d(0,"+ n +"%,0) rotateY(180deg)"})	
 	    	}
 	    }
+	}
 //requsetAnimationFrame与cancelRequestAnimationFrame兼容性；
 window.requestAnimationFrame = (function () {
     var originalRequestAnimationFrame = undefined,
