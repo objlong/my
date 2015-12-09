@@ -68,9 +68,15 @@
 			font-weight: bold;
 			font-size: 10px;
 			transform: rotateY(180deg);
+			-webkit-transform: rotateY(180deg);
 		}
 		.content p{
 			margin:0px;
+			width: 200%;
+			margin-left: -50%;
+			line-height: 1.5;
+			transform:scale(0.5);
+			-webkit-transform:scale(0.5);
 		}
 		#oUl li:nth-child(1) .content{
 			-webkit-transform: translate3d( 0px,63%,0px);
@@ -80,7 +86,6 @@
 		#oUl li:nth-child(2) .content{
 			-webkit-transform: translate3d( 0px,47%,0px);
 			transform: translate3d( 0px,47%,0px);
-			background-color: #FF6A65;
 			background-position: -119px 0px;
 		}
 		#oUl li:nth-child(3) .content{
@@ -101,13 +106,11 @@
 		#oUl li:nth-child(6) .content{
 			-webkit-transform: translate3d( 0px,47%,0px);
 			transform: translate3d( 0px,47%,0px);
-			background-color: #FF6A65;
 			background-position: -565px 0px;
 		}
 		#oUl li:nth-child(7) .content{
 			-webkit-transform: translate3d( 0px,61%,0px);
 			transform: translate3d( 0px,61%,0px);
-			/*background-color: #FF6A65;*/
 			background-position: -901px 0px;
 		}
 		#oUl li.prev{
@@ -130,11 +133,22 @@
 		#boost ul li.lager .content div{
 			display: block !important;
 		}
+		.mask{
+			position: fixed;
+			width: 100%;
+			height: 100%;
+			background-color: #000;
+			z-index: 99;
+			color: white;
+		}
 	</style>
 </head>
 <body>
+	<div class="mask" id="mask">
+		<p>请使用最新版本高级浏览器食用此网页，网页正在加载，请等待。。。</p>
+		<input type="button" value="立即进入，也许会很丑(⊙﹏⊙)b">
+	</div>
 	<div class = "div1">
-		<audio id='audiomedia' src= 'imgs/123.mp3' loop= 'loop' autoplay= 'autoplay'></audio>
 		<ul id="oUl">
 			<li>
 				<div class="content">
@@ -200,7 +214,7 @@
 				<div class="content">
 					<div>
 						<p>职阶：Lancer</p>
-						<p>姓名：库丘林（光之子）</p>
+						<p>姓名：库丘林（光之子</p>
 						<p>职阶技能：对魔力</p>
 						<p>苛刻的符合条件仅次于“Saber”职阶。全体能力值必需优秀，加之特别是敏捷要高。理所当然的，擅长于活用枪击范围和速度的一击脱离战法。</p>
 					</div>
@@ -212,6 +226,20 @@
 </html>
 <script type="text/javascript" src="js/jquery.js"></script>
 <script type="text/javascript">
+	//由于图片较多，页面加载需要时间，增加蒙版
+	var cur = 5;
+	var timer2 = setInterval(function (){
+		$('#mask p').html('请使用最新版本高级浏览器食用此网页，网页正在加载，请等待。。。' + cur);
+		cur--;
+		if (cur == 0) {
+			$('#mask').css('display', 'none');
+			clearInterval(timer2);
+		}
+	},1000)
+	$('#mask input').click(function(){
+		clearInterval(timer2);
+		$('#mask').css('display', 'none');
+	})
 	var W = $('.div1').outerWidth();
 	var L = $('.div1').offset().left;
 	//动画效果；
@@ -245,7 +273,6 @@
 				}
 			})
 		}
-		console.log(onoff)
 	}
 	// var oUl = document.getElementById('oUl');
 	// oUl.onmousemove = move;
@@ -263,7 +290,6 @@
 				$('.div1').attr("id" , "boost")
 				var middletarget = target.parent().offset().left + target.parent().outerWidth()/2;
 				middletarget = W/2 + L - middletarget + 16 ;
-				console.log(W,L)
 				$('#oUl').css({
 					"-webkit-transform" : "translate3d(" + ( 3 * middletarget ) + "px, 0, 0) scale(3)" ,
 					"transform" : "translate3d(" + ( 3 * middletarget ) + "px, 0, 0) scale(3)"
@@ -297,7 +323,11 @@
 	})
 
 	//音乐部分
-	var media = document.getElementById('audiomedia');
+	// var media = document.getElementById('audiomedia');
+	var media = new Audio();
+	media.src = 'imgs/123.mp3';
+	media.loop = 'loop';
+	media.autoplay = 'autoplay';
 	var audioContext, analyser, sound, arr,num, k, m, n;
 	media.addEventListener('canplay',loading)
 	//加载音频数据
