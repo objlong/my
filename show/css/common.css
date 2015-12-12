@@ -138,6 +138,8 @@ li{
 	width: 700px;
 	left: -700px;
 	color: #000;
+	background-image: url(../imgs/leaf.png);
+	background-repeat: no-repeat;
 }
 .ability li{
 	width: 100%;
@@ -198,9 +200,11 @@ li{
 	background-color: #D7ECF1;
 	top:210px;
 	opacity: 0.7;
-	color: #000;
 	line-height: 1.5;
-	/*display: none;*/
+}
+.works a{
+	text-decoration: none;
+	color: #000;
 }
 #works{
 	margin-left: 0px;
