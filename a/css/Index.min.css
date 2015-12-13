@@ -1,0 +1,1101 @@
+html {
+	margin: 0px; padding: 0px;
+}
+body {
+	margin: 0px; padding: 0px;
+}
+div {
+	margin: 0px; padding: 0px;
+}
+span {
+	margin: 0px; padding: 0px;
+}
+applet {
+	margin: 0px; padding: 0px;
+}
+object {
+	margin: 0px; padding: 0px;
+}
+iframe {
+	margin: 0px; padding: 0px;
+}
+h1 {
+	margin: 0px; padding: 0px;
+}
+h2 {
+	margin: 0px; padding: 0px;
+}
+h3 {
+	margin: 0px; padding: 0px;
+}
+h4 {
+	margin: 0px; padding: 0px;
+}
+h5 {
+	margin: 0px; padding: 0px;
+}
+h6 {
+	margin: 0px; padding: 0px;
+}
+p {
+	margin: 0px; padding: 0px;
+}
+blockquote {
+	margin: 0px; padding: 0px;
+}
+pre {
+	margin: 0px; padding: 0px;
+}
+a {
+	margin: 0px; padding: 0px;
+}
+abbr {
+	margin: 0px; padding: 0px;
+}
+acronym {
+	margin: 0px; padding: 0px;
+}
+address {
+	margin: 0px; padding: 0px;
+}
+big {
+	margin: 0px; padding: 0px;
+}
+cite {
+	margin: 0px; padding: 0px;
+}
+code {
+	margin: 0px; padding: 0px;
+}
+del {
+	margin: 0px; padding: 0px;
+}
+dfn {
+	margin: 0px; padding: 0px;
+}
+em {
+	margin: 0px; padding: 0px;
+}
+font {
+	margin: 0px; padding: 0px;
+}
+img {
+	margin: 0px; padding: 0px;
+}
+ins {
+	margin: 0px; padding: 0px;
+}
+kbd {
+	margin: 0px; padding: 0px;
+}
+q {
+	margin: 0px; padding: 0px;
+}
+s {
+	margin: 0px; padding: 0px;
+}
+samp {
+	margin: 0px; padding: 0px;
+}
+small {
+	margin: 0px; padding: 0px;
+}
+strike {
+	margin: 0px; padding: 0px;
+}
+strong {
+	margin: 0px; padding: 0px;
+}
+sub {
+	margin: 0px; padding: 0px;
+}
+sup {
+	margin: 0px; padding: 0px;
+}
+tt {
+	margin: 0px; padding: 0px;
+}
+var {
+	margin: 0px; padding: 0px;
+}
+b {
+	margin: 0px; padding: 0px;
+}
+u {
+	margin: 0px; padding: 0px;
+}
+i {
+	margin: 0px; padding: 0px;
+}
+center {
+	margin: 0px; padding: 0px;
+}
+dl {
+	margin: 0px; padding: 0px;
+}
+dt {
+	margin: 0px; padding: 0px;
+}
+dd {
+	margin: 0px; padding: 0px;
+}
+ol {
+	margin: 0px; padding: 0px;
+}
+ul {
+	margin: 0px; padding: 0px;
+}
+li {
+	margin: 0px; padding: 0px;
+}
+fieldset {
+	margin: 0px; padding: 0px;
+}
+form {
+	margin: 0px; padding: 0px;
+}
+label {
+	margin: 0px; padding: 0px;
+}
+legend {
+	margin: 0px; padding: 0px;
+}
+table {
+	margin: 0px; padding: 0px;
+}
+caption {
+	margin: 0px; padding: 0px;
+}
+tbody {
+	margin: 0px; padding: 0px;
+}
+tfoot {
+	margin: 0px; padding: 0px;
+}
+thead {
+	margin: 0px; padding: 0px;
+}
+tr {
+	margin: 0px; padding: 0px;
+}
+th {
+	margin: 0px; padding: 0px;
+}
+td {
+	margin: 0px; padding: 0px;
+}
+body {
+	font: 12px/1.5 Arial, sans-serif; font-size-adjust: none; font-stretch: normal;
+}
+button {
+	font: 12px/1.5 Arial, sans-serif; font-size-adjust: none; font-stretch: normal;
+}
+input {
+	font: 12px/1.5 Arial, sans-serif; font-size-adjust: none; font-stretch: normal;
+}
+select {
+	font: 12px/1.5 Arial, sans-serif; font-size-adjust: none; font-stretch: normal;
+}
+textarea {
+	font: 12px/1.5 Arial, sans-serif; font-size-adjust: none; font-stretch: normal;
+}
+h3 {
+	font-size: 14px;
+}
+small {
+	font-size: 12px;
+}
+ul {
+	list-style: none;
+}
+ol {
+	list-style: none;
+}
+a {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: none;
+}
+abbr[title] {
+	border-bottom-color: currentColor; border-bottom-width: 1px; border-bottom-style: dotted; cursor: help;
+}
+acronym[title] {
+	border-bottom-color: currentColor; border-bottom-width: 1px; border-bottom-style: dotted; cursor: help;
+}
+q::before {
+	content: "";
+}
+q::after {
+	content: "";
+}
+fieldset {
+	border: currentColor;
+}
+img {
+	border: currentColor;
+}
+button {
+	font-size: 100%;
+}
+input {
+	font-size: 100%;
+}
+select {
+	font-size: 100%;
+}
+textarea {
+	font-size: 100%;
+}
+table {
+	border-collapse: collapse; border-spacing: 0;
+}
+.clearfix::after {
+	height: 0px; clear: both; display: block; visibility: hidden; content: ".";
+}
+.clear {
+	clear: both;
+}
+#page {
+	background: url("../images/topBg.png") repeat-x; width: 100%;
+}
+#wrapper {
+	background: url("../images/topBgRight.png") no-repeat right top; width: 100%;
+}
+#header {
+	background: url("../images/header.png") no-repeat 0px 0px; margin: 0px auto; width: 1200px; height: 156px;
+}
+#topBar {
+	height: 15px; position: relative;
+}
+#login {
+	top: 12px; width: 108px; height: 18px; text-align: center; right: 101px; margin-top: -2px; margin-right: 47px; position: absolute;
+}
+#logout {
+	top: 12px; width: 108px; height: 18px; text-align: center; right: 101px; margin-top: -2px; margin-right: 47px; position: absolute;
+}
+#login a {
+	color: rgb(255, 255, 255); text-decoration: none;
+}
+#logout a {
+	color: rgb(255, 255, 255); text-decoration: none;
+}
+#nav {
+	height: 141px; padding-left: 580px;
+}
+#nav .wrap {
+	margin: 28px 5px 0px; width: 52px; text-align: center; padding-top: 37px; float: left; position: relative; cursor: pointer;
+}
+#nav #nav1 {
+	background-position: 0px 0px;
+}
+#nav #nav2 {
+	background-position: 0px -57px;
+}
+#nav #nav3 {
+	background-position: 0px -114px;
+}
+#nav #nav4 {
+	background-position: 0px -171px;
+}
+#nav #nav5 {
+	background-position: 0px -228px;
+}
+#nav #nav6 {
+	background-position: 0px -285px;
+}
+#nav #nav7 {
+	background-position: 0px -342px;
+}
+#nav #nav8 {
+	background-position: 0px -399px;
+}
+#nav .nav {
+	height: 57px; background-image: url("../images/navs.png");
+}
+#nav .mouseon {
+	left: 0px; width: 52px; color: rgb(255, 255, 255); padding-top: 37px; position: absolute; z-index: 100;
+}
+#search {
+	background: url("../images/weatherBg.gif") repeat-x; height: 54px;
+}
+#sayOne {
+	width: 360px; line-height: 54px; padding-left: 30px; float: left;
+}
+#searchAndWeather {
+	width: 509px; float: right;
+}
+#seachBody {
+	width: 189px; height: 28px; padding-right: 24px; margin-top: 14px; float: left; position: relative;
+}
+#seachBody input {
+	border-width: 1px medium medium 1px; border-style: solid none none solid; border-color: rgb(209, 209, 209) currentColor currentColor rgb(209, 209, 209); padding: 1px 2px; width: 146px; height: 21px;
+}
+#seachBody .sub {
+	background: url("../images/tip.png") no-repeat 0px 0px; padding: 0px; border: currentColor; left: 160px; top: 2px; width: 26px; height: 26px; position: absolute; cursor: pointer;
+}
+#weatherBody {
+	width: 296px; height: 54px; float: right;
+}
+#weatherBody ul {
+	background: url("../images/tip.png") no-repeat -56px 6px; width: 213px; padding-right: 30px; padding-left: 8px; margin-top: 3px; float: right;
+}
+#weatherBody img {
+	width: 37px; height: 37px; margin-top: 8px; margin-right: 8px; float: right; display: block;
+}
+#weatherBody ul li {
+	width: 213px; text-align: justify; line-height: 22px;
+}
+#slide {
+	background: url("../images/slidePicBg.gif") repeat-x left bottom; width: 650px; height: 310px; float: left;
+}
+#slide .leftMenu {
+	background: url("../images/tab.gif") no-repeat 0px 0px; left: 0px; top: 137px; width: 30px; height: 47px; position: absolute; z-index: 500; cursor: pointer;
+}
+#slide .rightMenu {
+	background: url("../images/tab.gif") no-repeat -90px 0px; top: 137px; width: 30px; height: 47px; right: 0px; position: absolute; z-index: 500; cursor: pointer;
+}
+.slideInner {
+	left: 0px; top: 0px; width: 2648px; height: 331px; position: absolute;
+}
+#slide div.imgWrap {
+	width: 650px; height: 310px; float: left; position: relative;
+}
+#slide .imgWrap div.text {
+	background: url("../images/slideBgBorder.gif") no-repeat left top; left: 1px; width: 648px; height: 40px; bottom: 0px; overflow: hidden; filter: Alpha(opacity=0); position: absolute; z-index: 10; opacity: 0;
+}
+#slide .imgWrap div.showNow {
+	filter: Alpha(opacity=60); opacity: 0.6;
+}
+#slide .imgWrap div.text .textInner {
+	background: rgb(51, 51, 51); padding: 0px 20px; line-height: 40px; overflow: hidden;
+}
+#slide .imgWrap div.text p {
+	color: rgb(255, 255, 255); line-height: 40px; font-size: 14px;
+}
+#slide img {
+	padding: 0px; border: 1px solid rgb(205, 205, 205); width: 648px; height: 308px;
+}
+#slide .button {
+	height: 10px; right: 36px; bottom: 55px; position: absolute;
+}
+#slide .button li {
+	background: rgb(255, 255, 255); margin: 0px 2px; border: 1px solid rgb(51, 51, 51); width: 12px; height: 8px; overflow: hidden; float: left; filter: alpha(opacity=60); cursor: pointer; opacity: 0.6;
+}
+#slide .button li.now {
+	background: rgb(51, 51, 51);
+}
+#tools {
+	border: 1px solid rgb(205, 205, 205); width: 278px; height: 308px; overflow: hidden; margin-left: 0px; float: left; position: relative; z-index: 9999;
+}
+#smallTools {
+	height: 214px; overflow: hidden; position: relative;
+}
+#smallTools .slideWrap {
+	width: 238px; height: 67px; float: left;
+}
+#smallTools .left {
+	background: url("../images/tab.gif") no-repeat -172px 0px; width: 20px; height: 67px; float: left; cursor: pointer;
+}
+#smallTools ul {
+	height: 69px;
+}
+#smallTools ul li {
+	width: 79px; height: 69px; text-align: center; float: left;
+}
+#smallTools ul li a {
+	width: 79px; height: 22px; color: rgb(0, 0, 0); padding-top: 47px; display: block;
+}
+#smallTools .right {
+	background: url("../images/tab.gif") no-repeat -233px 0px; width: 20px; height: 67px; float: right; cursor: pointer;
+}
+#smallTools .extend {
+	display: none;
+}
+#t6 {
+	padding-top: 5px; padding-bottom: 15px;
+}
+#t6 ul li a {
+	width: 128px; height: 33px; margin-top: 10px; margin-left: 10px; display: block;
+}
+#outlink {
+	background: url("../images/line.gif") repeat-x left top; height: 93px; clear: both; position: relative; z-index: 9999;
+}
+#outlink ul {
+	height: 57px;
+}
+#outlink ul li {
+	width: 79px; height: 57px; float: left;
+}
+#outlink ul li a {
+	margin: 0px auto; width: 49px; height: 57px; display: block;
+}
+.toolBox {
+	width: 237px; overflow: hidden; margin-left: 10px; float: left; position: relative;
+}
+.innerToolBox {
+	left: 0px; top: 0px; position: absolute;
+}
+.slideBar {
+	width: 11px; float: right;
+}
+.slideBar .upBtn {
+	background: url("../images/up_btn.png") no-repeat left top; padding: 0px; width: 9px; height: 7px; line-height: 0; margin-top: 2px; display: block;
+}
+.slideBar .upBtn:hover {
+	border: 1px solid rgb(0, 0, 0);
+}
+.slideBar .downBtn {
+	background: url("../images/down_btn.png") no-repeat left top; margin: 0px; padding: 0px; width: 9px; height: 7px; line-height: 0; display: block;
+}
+.slideBar .downBtn:hover {
+	border: 1px solid rgb(0, 0, 0);
+}
+.barBox {
+	width: 11px; position: relative;
+}
+.innerBar {
+	background: rgb(164, 164, 164); top: 0px; width: 10px; position: absolute; cursor: s-resize;
+}
+#smallTools .barBox {
+	margin: 4px 0px; height: 183px;
+}
+#outlink .barBox {
+	margin: 4px 0px; height: 61px;
+}
+#smallTools .toolBox {
+	height: 207px; margin-top: 5px;
+}
+#smallTools .slideBar {
+	height: 214px;
+}
+#outlink .toolBox {
+	height: 57px; margin-top: 20px;
+}
+#outlink .slideBar {
+	height: 93px;
+}
+.contentBox {
+	border: 1px solid rgb(205, 205, 205); padding-bottom: 15px; margin-top: 15px;
+}
+.contentBox h3 {
+	background: url("../images/contentHBg.gif") repeat-x; height: 33px; border-bottom-color: rgb(205, 205, 205); border-bottom-width: 1px; border-bottom-style: solid;
+}
+.contentBox h3 .more {
+	margin-top: 10px; margin-right: 15px; float: right;
+}
+.contentBox h3 .head {
+	margin-top: 4px; margin-left: 15px;
+}
+#news {
+	padding: 0px; width: 648px; height: 223px; overflow: hidden; margin-top: 10px;
+}
+#news h3 {
+	position: relative;
+}
+#news h3 ul {
+	left: 360px; top: 1px; position: absolute;
+}
+#news h3 ul li {
+	color: rgb(70, 70, 70); font-size: 13px; float: left;
+}
+#news h3 ul li a {
+	margin: 0px 5px; padding: 0px 5px; color: rgb(70, 70, 70); line-height: 30px; font-weight: 100; display: block;
+}
+#news h3 ul li a.show {
+	background: rgb(151, 176, 30); color: rgb(255, 255, 255); font-weight: bold;
+}
+#news .content {
+	margin-top: 15px;
+}
+#news .content div {
+	display: none;
+}
+#news .content div ul {
+	height: 164px;
+}
+#news .content div.show {
+	display: block;
+}
+#news .news_pic {
+	background: url("../images/pic_bg.png") no-repeat left bottom; padding-bottom: 4px; margin-left: 15px; float: left; position: relative;
+}
+#news .news_pic a {
+	display: block;
+}
+#news .news_pic h4 {
+	background: rgb(51, 51, 51); left: 4px; width: 189px; bottom: 8px; color: rgb(255, 255, 255); line-height: 24px; font-size: 13px; font-weight: 200; display: block; filter: alpha(opacity=60); position: absolute; opacity: 0.6;
+}
+#news .news_pic img {
+	padding: 3px; border: 1px solid rgb(205, 205, 205); width: 189px; height: 152px;
+}
+#newsPic {
+	width: 189px; padding-left: 15px; float: left;
+}
+.news_list {
+	padding: 0px 15px 0px 10px; width: 175px; height: 152px; margin-left: 10px; float: left; position: relative;
+}
+.left_news_list {
+	background: url("../images/mid.gif") no-repeat right top;
+}
+.news_list .news_title {
+	padding: 5px 0px 10px; font-size: 14px; font-weight: bold; margin-bottom: 5px; border-bottom-color: rgb(205, 205, 205); border-bottom-width: 1px; border-bottom-style: dashed;
+}
+.news_list .news_li {
+	height: 23px;
+}
+.news_list .news_li .news_link {
+	width: 125px; height: 23px; color: rgb(102, 102, 102); line-height: 23px; overflow: hidden; float: left;
+}
+.news_list .news_li .news_link:hover {
+	color: rgb(73, 171, 88);
+}
+.news_list .news_li .news_date {
+	width: 35px; line-height: 23px; float: right;
+}
+#schollNews {
+	background: url("../images/mid.gif") no-repeat right top; width: 450px; padding-right: 18px; padding-left: 15px; float: left;
+}
+#schollNews dt {
+	width: 450px;
+}
+#comment {
+	width: 214px; padding-right: 15px; float: right;
+}
+#comment dt {
+	width: 214px;
+}
+#newsPic img {
+	padding: 4px; border: 1px solid rgb(205, 205, 205); width: 181px; height: 152px;
+}
+#schollNews dd {
+	background: url("../images/tip2.png") no-repeat 0px 0px; color: rgb(255, 91, 91); padding-left: 32px;
+}
+#comment dd {
+	background: url("../images/tip2.png") no-repeat 0px -47px; color: rgb(88, 104, 255); padding-left: 32px;
+}
+#video {
+	width: 278px; height: 223px; overflow: hidden; padding-bottom: 0px; margin-top: 10px; margin-left: 0px;
+}
+#video .content {
+	margin-top: 15px;
+}
+#video .content .clearfix {
+	margin: 0px 15px;
+}
+#video .video_play {
+	width: 111px; float: left; position: relative;
+}
+#video .video_pic {
+	background: url("../images/videopic_bg.gif") no-repeat left bottom; height: 91px;
+}
+#video .video_pic img {
+	padding: 3px; border: 1px solid rgb(205, 205, 205); width: 103px; height: 80px; z-index: 0;
+}
+#video .video_btn {
+	left: 42px; top: 31px; filter: alpha(opacity=65); position: absolute; opacity: 0.65;
+}
+#video .video_btn:hover {
+	filter: alpha(opacity=85); opacity: 0.85;
+}
+#video .video_dtl {
+	width: 120px; font-size: 14px; float: right;
+}
+#video .video_dtl h4 {
+	font-weight: bold;
+}
+#video .video_dtl h4 a {
+	color: rgb(37, 204, 88);
+}
+#video .video_dtl p {
+	color: rgb(102, 102, 102); font-weight: 100;
+}
+#video .smallTab {
+	background: none; margin: 10px 10px 0px; padding: 0px; height: 60px;
+}
+#video .smallTab .slideWrap {
+	width: 225px; height: 60px; margin-left: 0px; float: left;
+}
+#video .smallTab .slideInner {
+	height: 60px;
+}
+.videoTab li {
+	width: 63px; padding-left: 10px; float: left;
+}
+.videoTab li img {
+	border: 1px solid rgb(205, 205, 205); width: 60px; height: 57px;
+}
+#forum {
+	width: 648px; height: 368px; overflow: hidden; padding-bottom: 0px; margin-top: 10px;
+}
+#forum .content {
+	padding: 10px 0px 0px 15px; margin-top: 0px;
+}
+.forum_list {
+	height: 40px; display: block;
+}
+.forum_list li {
+	width: 192px; margin-right: 18px; float: left;
+}
+.forum_pic {
+	height: 175px; margin-top: 10px;
+}
+.forum_topic {
+	width: 150px; float: left;
+}
+.forum_topic h4 {
+	font-size: 13px; font-weight: bold;
+}
+.forum_topic p {
+	color: rgb(102, 102, 102);
+}
+.forum_pic .news_pic {
+	margin-right: 20px; float: left;
+}
+.forum_pic .inner_news_pic {
+	background: url("../images/pic_bg.png") no-repeat left bottom; padding-bottom: 4px; position: relative;
+}
+.forum_li {
+	margin-top: 5px; margin-left: 5px;
+}
+.forum_li li {
+	width: 170px; height: 25px; overflow: hidden;
+}
+#forum_pic .forum_li li a {
+	color: rgb(102, 102, 102); line-height: 25px;
+}
+#forum_pic .forum_li li a:hover {
+	color: rgb(73, 171, 88);
+}
+.forum_pic .inner_news_pic a {
+	display: block;
+}
+.forum_pic .inner_news_pic img {
+	padding: 3px; border: 1px solid rgb(205, 205, 205); width: 182px; height: 57px;
+}
+.forum_icon {
+	float: right;
+}
+#forum .content .smallTab {
+	background: none; height: 70px; padding-top: 0px; margin-left: 5px;
+}
+#forum .content .smallTab .slideWrap {
+	width: 575px; height: 60px; float: left;
+}
+.forumTab {
+	height: 60px;
+}
+.forumTab li {
+	padding-left: 18px; float: left;
+}
+.forumTab li a {
+	line-height: 0;
+}
+.forumTab li img {
+	border: 1px solid rgb(191, 189, 190); width: 60px; height: 57px;
+}
+#flea {
+	width: 463px; height: 220px; overflow: hidden; padding-bottom: 0px; margin-top: 10px; margin-left: 0px;
+}
+#sellShow {
+	display: none;
+}
+#flea .show {
+	color: rgb(255, 255, 255);
+}
+#flea h3 {
+	position: relative;
+}
+#flea h3 div {
+	background: url("../images/buyAndSellBg.gif") no-repeat 0px 0px; left: 114px; top: 0px; height: 33px; line-height: 33px; position: absolute; cursor: pointer;
+}
+#flea h3 div span {
+	padding-right: 20px; margin-left: 15px;
+}
+.fleaList li ul {
+	width: auto; overflow: hidden; padding-left: 15px;
+}
+.fleaList li {
+	background: url("../images/mid.gif") no-repeat right; width: 130px; padding-right: 18px;
+}
+.fleaList li ul li {
+	background: none; overflow: hidden; padding-right: 0px; margin-left: 0px; float: none;
+}
+.fleaList li ul.left li {
+	width: 52px;
+}
+.fleaList li ul.right li {
+	width: 28px; color: rgb(102, 102, 102);
+}
+.fleaList li.ul3 {
+	background: none; width: 130px; padding-right: 20px; float: right;
+}
+.fleaList li.ul3 ul li {
+	width: 110px; color: rgb(102, 102, 102);
+}
+.fleaList li ul li.fleaPic {
+	width: 110px; height: 80px; padding-bottom: 10px;
+}
+.fleaList li ul li.fleaPic img {
+	padding: 4px; border: 1px solid rgb(205, 205, 205); width: 100px; height: 70px;
+}
+.green {
+	color: rgb(37, 204, 88);
+}
+.red {
+	color: rgb(253, 18, 18);
+}
+.smallTab {
+	background: url("../images/line.gif") repeat-x; margin: 15px 15px 0px; height: 87px; padding-top: 20px;
+}
+.smallTab div.leftBar {
+	background: url("../images/tab.gif") no-repeat -120px 22px; width: 13px; height: 83px; float: left; cursor: pointer;
+}
+.smallTab div.rightBar {
+	background: url("../images/tab.gif") no-repeat -159px 22px; width: 13px; height: 83px; float: left; cursor: pointer;
+}
+#lost {
+	width: 278px; height: 368px; overflow: hidden; padding-bottom: 0px; margin-top: 10px; margin-left: 0px;
+}
+#lostPic {
+	padding-left: 15px; float: left;
+}
+#lostPic img {
+	border: 1px solid rgb(205, 205, 205); width: 80px; height: 68px;
+}
+#lostTop ul {
+	width: 151px; padding-right: 15px; float: right;
+}
+#lostTop ul li {
+	width: 151px; color: rgb(102, 102, 102);
+}
+.lostContent {
+	background: url("../images/line.gif") repeat-x left top; margin: 15px 15px 0px; height: 80px; padding-top: 16px; clear: both;
+}
+.left {
+	width: 30px; float: left;
+}
+.lostContent .list {
+	width: 122px; overflow: hidden; margin-left: 15px; float: left;
+}
+.lostContent .list li {
+	width: 122px;
+}
+.lostContent .right {
+	width: 66px; height: 67px; margin-top: 8px;
+}
+#downLoad {
+	width: 463px; height: 220px; overflow: hidden; padding-bottom: 0px; margin-top: 10px;
+}
+#downLoad .content {
+	margin-top: 15px;
+}
+#downLoadList {
+	clear: both;
+}
+#downLoad .rightText {
+	width: 320px;
+}
+#downLoad div.list {
+	height: 75px;
+}
+#downLoad div.list ul {
+	width: 120px;
+}
+#downLoad div.list ul li {
+	width: 100px;
+}
+#boya {
+	padding: 0px; width: 318px; height: 220px; margin-top: 10px;
+}
+.boderImg {
+	background: url("../images/bottom.gif") no-repeat right bottom; height: 88px; padding-left: 15px; float: left;
+}
+.boderImg img {
+	border-width: 1px 1px medium; border-style: solid solid none; border-color: rgb(205, 205, 205) rgb(205, 205, 205) currentColor; padding: 2px; width: 80px; height: 80px;
+}
+.rightText {
+	width: 147px; height: 84px; overflow: hidden; padding-right: 15px; margin-left: 15px; float: right;
+}
+.rightText p {
+	color: rgb(102, 102, 102); margin-top: 10px;
+}
+.rightText h4 a {
+	color: rgb(66, 100, 163); font-size: 14px;
+}
+#boya div.list {
+	height: 50px; padding-top: 15px;
+}
+#boya div.list a:hover {
+	color: rgb(71, 170, 90);
+}
+div.list {
+	padding-top: 4px; clear: both; margin-top: 0px;
+}
+div.list ul {
+	background: url("../images/smallMid.gif") no-repeat right; width: 107px; padding-right: 18px; padding-left: 15px; float: left;
+}
+div.list ul li {
+	width: 107px;
+}
+div.list ul.bgNone {
+	background: none; padding-right: 15px;
+}
+#flying {
+	width: 278px; height: 220px; padding-bottom: 0px; margin-top: 10px; margin-left: 0px;
+}
+#newsList {
+	margin: 8px 15px 0px;
+}
+#newsList li {
+	width: 240px;
+}
+#newsList li a:hover {
+	color: rgb(44, 132, 219);
+}
+#music {
+	width: 318px; height: 220px; padding-bottom: 0px; margin-top: 10px; margin-left: 0px;
+}
+#musicSlide {
+	background: none; padding-top: 0px; clear: both;
+}
+#musicSlide .leftBar {
+	height: 59px; margin-left: 10px;
+}
+#musicSlide .rightBar {
+	height: 59px; margin-left: 10px;
+}
+#musicSlide .slideWrap {
+	width: 212px; height: 59px; float: left;
+}
+#musicSlide ul {
+	width: 414px; height: 59px;
+}
+#musicSlide ul li {
+	width: 59px; height: 59px; padding-left: 10px; float: left;
+}
+#musicSlide ul li img {
+	border: 1px solid rgb(205, 205, 205); width: 57px; height: 57px;
+}
+#footer {
+	background: url("../images/footerBg.gif") repeat-x; height: 120px; color: rgb(255, 255, 255); padding-top: 15px; padding-bottom: 25px; clear: both; margin-top: 15px;
+}
+#footer p {
+	height: 26px; text-align: center; line-height: 26px;
+}
+#footer p a {
+	margin: 0px 5px; color: rgb(255, 255, 255);
+}
+#footer p img {
+	width: 52px; height: 50px;
+}
+.list dd {
+	font-weight: 700;
+}
+.list dd a {
+	font-weight: 400; float: right;
+}
+dl.list dt.first {
+	background: url("../images/line.gif") repeat-x; padding-top: 10px; margin-top: 10px;
+}
+ul.list li.first {
+	background: url("../images/line.gif") repeat-x; padding-top: 10px; margin-top: 10px;
+}
+dl.list dt span {
+	padding-left: 15px; float: right;
+}
+ul.list li span {
+	padding-left: 15px; float: right;
+}
+dl.list dt {
+	height: 24px; line-height: 24px; overflow: hidden;
+}
+ul.list li {
+	height: 24px; line-height: 24px; overflow: hidden;
+}
+dl.list dt a {
+	color: rgb(102, 102, 102);
+}
+ul.list li a {
+	color: rgb(102, 102, 102);
+}
+#flea .slideInner ul li a {
+	color: rgb(102, 102, 102);
+}
+dl.list dt a:hover {
+	color: rgb(230, 157, 108);
+}
+ul.list li a:hover {
+	color: rgb(230, 157, 108);
+}
+#flea .slideInner ul li a:hover {
+	color: rgb(230, 157, 108);
+}
+.slideWrap {
+	overflow: hidden; position: relative;
+}
+a:link {
+	color: rgb(0, 0, 0);
+}
+a:visited {
+	color: rgb(85, 26, 139);
+}
+.right {
+	float: right;
+}
+#flea .slideInner ul li {
+	text-align: center;
+}
+#login a:hover {
+	text-decoration: underline;
+}
+#logout a:hover {
+	text-decoration: underline;
+}
+#nav a:hover #mouseon1 {
+	text-decoration: underline;
+}
+#nav a:hover #mouseon2 {
+	text-decoration: underline;
+}
+#nav a:hover #mouseon3 {
+	text-decoration: underline;
+}
+#nav a:hover #mouseon4 {
+	text-decoration: underline;
+}
+#nav a:hover #mouseon5 {
+	text-decoration: underline;
+}
+#nav a:hover #mouseon6 {
+	text-decoration: underline;
+}
+#nav a:hover #mouseon7 {
+	text-decoration: underline;
+}
+#nav a:hover #mouseon8 {
+	text-decoration: underline;
+}
+#smallTools ul li a:hover {
+	text-decoration: underline;
+}
+.rightText h4 a:hover {
+	text-decoration: underline;
+}
+#content {
+	margin-top: 10px;
+}
+.contentBox .content {
+	margin-top: 10px;
+}
+#bigAd {
+	margin-top: 10px;
+}
+#bigAd {
+	border: 1px solid rgb(205, 205, 205); width: 938px; height: 123px; overflow: hidden;
+}
+#bigAd img {
+	width: 938px; height: 123px;
+}
+#schollNews dd a {
+	color: rgb(255, 91, 91);
+}
+#schollNews dt a:hover {
+	color: rgb(255, 91, 91);
+}
+#comment dd a {
+	color: rgb(88, 104, 255);
+}
+#comment dt a:hover {
+	color: rgb(88, 104, 255);
+}
+#forum .left ul {
+	float: left;
+}
+#forum .right ul {
+	float: left;
+}
+#flea .slideInner ul {
+	float: left;
+}
+.fleaList .bgNone {
+	background: none;
+}
+.bgNone {
+	background: none;
+}
+.textInner h3 a:link {
+	color: rgb(39, 197, 202); font-size: 14px; text-decoration: none;
+}
+.textInner h3 a:visited {
+	color: rgb(39, 197, 202); font-size: 14px; text-decoration: none;
+}
+.textInner h3 a:hover {
+	color: rgb(240, 0, 0); font-size: 14px; text-decoration: none;
+}
+.textInner p a:link {
+	color: rgb(255, 255, 255); text-decoration: none;
+}
+.textInner p a:visited {
+	color: rgb(255, 255, 255); text-decoration: none;
+}
+.textInner p a:hover {
+	color: rgb(255, 102, 0); text-decoration: none;
+}
+#box_login {
+	background: rgb(255, 255, 255); border: 7px solid rgb(205, 205, 205); clear: both; z-index: 10000;
+}
+#btn_login {
+	padding: 0px; border: 1px solid rgb(205, 205, 205); width: 50px; height: 30px; color: rgb(61, 61, 61); line-height: 30px; font-size: 14px; margin-right: 20px; cursor: pointer;
+}
+.hideLogin {
+	width: 0px; height: 0px; display: none; position: absolute;
+}
+.showLogin {
+	width: 435px; height: 339px; display: block; position: absolute;
+}
+.form_head {
+	height: 25px; text-align: right; padding-top: 7px; padding-right: 7px;
+}
+.form_head a {
+	background: url("../images/close.png") no-repeat left top; border: currentColor; width: 19px; height: 17px; float: right; display: block;
+}
+.form_login {
+	padding: 0px 57px 40px;
+}
+.title_form {
+	color: rgb(124, 148, 255); font-family: "Microsoft YaHei","Microsoft JhengHei",STHeiti,Georgia,"Times New Roman",Times,serif; font-size: 24px; margin-bottom: 15px;
+}
+.field {
+	line-height: 42px; margin-bottom: 10px;
+}
+.field label {
+	height: 22px; color: rgb(102, 102, 102); line-height: 22px; font-size: 14px; display: inline-block;
+}
+* html .field label {
+	margin-top: 8px; vertical-align: middle;
+}
+.field input {
+	border: 1px solid rgb(204, 204, 204); width: 260px; height: 33px; line-height: 22px;
+}
+* html .field input {
+	margin-top: 8px; vertical-align: middle;
+}
+.info span {
+	color: rgb(255, 102, 0); font-size: 12px;
+}
+.last_field {
+	background: none; height: 30px; line-height: 30px; padding-bottom: 1px; margin-top: 20px; margin-bottom: 0px;
+}
+* html .last_field input {
+	margin-top: 0px;
+}
+.last_field span a {
+	color: rgb(52, 132, 190); font-size: 12px; text-decoration: none;
+}
+.last_field span a:hover {
+	color: rgb(255, 102, 0); font-size: 12px; text-decoration: none;
+}
+.focus {
+	background: rgb(255, 255, 153);
+}
