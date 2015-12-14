@@ -122,255 +122,255 @@
 			<img src="imgs/bottom2_1.png" />
 		</div>
 	</div>
-</body>
-</html>
-<script type="text/javascript" src="js/jquery.js"></script>
-<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
-<script type="text/javascript" src="js/rain.js"></script>
-<script type="text/javascript">
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+	<script type="text/javascript" src="js/rain.js"></script>
+	<script type="text/javascript">
 
-	var currentpage = 0;
-	var onoff = true;
-	//屏蔽滚动条
-	$('body').css('overflow' , 'hidden')
+		var currentpage = 0;
+		var onoff = true;
+		//屏蔽滚动条
+		$('body').css('overflow' , 'hidden')
 
-	//设置每一屏的高度,设置屏幕缩放时尺寸变化
-	$('.page').height($(window).height())
-	$(window).on('resize' , function() {
-		$('.page').height($(window).height());
-		if (currentpage) {
-			var marginTop = -$('.page').height() * currentpage;
-			$('#container').css('marginTop' , marginTop);
-		}
-		if ($('.page').width() <= 960) {
-			$('#top_tag, #bottom_tag2').css({'marginLeft' : 415,
-			  'marginRight' : 415
-			})
-		}else{
-			$('#top_tag, #bottom_tag2').css('margin' , '')
-		}
-	})
-
-	//page1按钮链接与跳转效果
-	$('.btn').on({
-		mouseout : function  () {$(this).css('fontSize' , '')},
-		click : function () {
-			if (onoff) {
-				onoff = false;
-				$(this).css('fontSize' , '35px');
-				var m = $(this).index('.btn');
-				turnpage(m);
-			};
-		}
-	})
-
-	//点击底部tag跳转效果
-	$('.bottom_tag').on({ 
-		click : function  () {
-			if (onoff) {
-				onoff = false;
-				turnpage(0);
-			};
-		}
-	})
-	$('.bottom_tag2').on({ 
-		click : function  () {
-			if (onoff) {
-				onoff = false;
-				turnpage(currentpage);
-			};
-		}
-	})
-
-	//点击顶部tag跳转首页
-	$('#top_tag').on('click' , function() {
-		if (currentpage == 0) {
-			return;
-		}
-		if (onoff) {
-			onoff = false;
-			turnpagezero();
-			currentpage = 0 ;
-		};
-	})
-	//返回首页函数
-	function  turnpagezero() {
-		if ($('#header').css('display') == 'block') {
-			$('#header').slideUp(200 , function  () {
-				$('#container').animate({'marginTop' : '0px'}, 1000, function(){
-					page1();
-					page2();
-					page3();
-					page4();
-					onoff = true;
-				});
-			})
-		}
-	}
-
-	//头部导航页面跳转效果
-	$('#header li').on('click' , function () {
-		if (onoff) {
-			onoff = false;
-			var o = $(this).index('#header li') ;
-			turnpage(o);
-		};
-	})
-
-	//鼠标滚轮页面跳转效果
-	var container = document.getElementById('container');
-	var num;
-	mouseScroll	(container, function(e){
-		if (currentpage == 0) {
-			return;
-		}
-		if (onoff) {
-			onoff = false;
-			if (currentpage == 1) {
-				turnpagezero();
-				currentpage = 0;
+		//设置每一屏的高度,设置屏幕缩放时尺寸变化
+		$('.page').height($(window).height())
+		$(window).on('resize' , function() {
+			$('.page').height($(window).height());
+			if (currentpage) {
+				var marginTop = -$('.page').height() * currentpage;
+				$('#container').css('marginTop' , marginTop);
+			}
+			if ($('.page').width() <= 960) {
+				$('#top_tag, #bottom_tag2').css({'marginLeft' : 415,
+				  'marginRight' : 415
+				})
 			}else{
-				num = currentpage - 2;
+				$('#top_tag, #bottom_tag2').css('margin' , '')
+			}
+		})
+
+		//page1按钮链接与跳转效果
+		$('.btn').on({
+			mouseout : function  () {$(this).css('fontSize' , '')},
+			click : function () {
+				if (onoff) {
+					onoff = false;
+					$(this).css('fontSize' , '35px');
+					var m = $(this).index('.btn');
+					turnpage(m);
+				};
+			}
+		})
+
+		//点击底部tag跳转效果
+		$('.bottom_tag').on({ 
+			click : function  () {
+				if (onoff) {
+					onoff = false;
+					turnpage(0);
+				};
+			}
+		})
+		$('.bottom_tag2').on({ 
+			click : function  () {
+				if (onoff) {
+					onoff = false;
+					turnpage(currentpage);
+				};
+			}
+		})
+
+		//点击顶部tag跳转首页
+		$('#top_tag').on('click' , function() {
+			if (currentpage == 0) {
+				return;
+			}
+			if (onoff) {
+				onoff = false;
+				turnpagezero();
+				currentpage = 0 ;
+			};
+		})
+		//返回首页函数
+		function  turnpagezero() {
+			if ($('#header').css('display') == 'block') {
+				$('#header').slideUp(200 , function  () {
+					$('#container').animate({'marginTop' : '0px'}, 1000, function(){
+						page1();
+						page2();
+						page3();
+						page4();
+						onoff = true;
+					});
+				})
+			}
+		}
+
+		//头部导航页面跳转效果
+		$('#header li').on('click' , function () {
+			if (onoff) {
+				onoff = false;
+				var o = $(this).index('#header li') ;
+				turnpage(o);
+			};
+		})
+
+		//鼠标滚轮页面跳转效果
+		var container = document.getElementById('container');
+		var num;
+		mouseScroll	(container, function(e){
+			if (currentpage == 0) {
+				return;
+			}
+			if (onoff) {
+				onoff = false;
+				if (currentpage == 1) {
+					turnpagezero();
+					currentpage = 0;
+				}else{
+					num = currentpage - 2;
+					turnpage(num);
+				}
+			}
+		}, function(e){
+			if (currentpage == 4) {
+				return;
+			}
+			if (onoff) {
+				onoff = false;
+				num = currentpage;
 				turnpage(num);
 			}
-		}
-	}, function(e){
-		if (currentpage == 4) {
-			return;
-		}
-		if (onoff) {
-			onoff = false;
-			num = currentpage;
-			turnpage(num);
-		}
-	})
-	//mouseScroll事件的封装，包括方法与兼容性封装
-	//2015.12.2 17:10 objlong007
-	//obj: 鼠标滚轮事件触发的元素； fn1： 滚轮上滚触发的函数； fn2： 滚轮下衮触发的函数；
-	function mouseScroll (obj, fn1, fn2) {
-		obj.onmousewheel = fn;
-		if (obj.addEventListener) {
-			obj.addEventListener('DOMMouseScroll', fn, false)
-		}
-		function fn (ev) {
-			var e = ev || event;
-			var detail;
-			if (e.wheelDelta) {
-				detail = e.wheelDelta > 0 ? true : false;
-			}else{
-				detail = e.detail < 0 ? true : false;
-			}
-			if (detail) {
-				fn1 && fn1.call(obj, e);
-			}else{
-				fn2 && fn2.call(obj, e);
-			}
-			if (e.preventDefault) {
-				e.preventDefault();
-			}
-			return false;
-		}
-	}
-
-	//页面跳转函数
-	//2015.12.1 15:10 objlong007
-	//n : 按钮索引值n = 需要显示的当前页索引值 - 1
-	function turnpage (n) {
-		currentpage = n + 1;
-
-		var marginTop = -$('.page').height() * currentpage;
-		$('#container').animate({'marginTop' : marginTop} ,1000, 'easeInOutExpo', function  () {
-			if ($('#header').css('display') == 'none') {
-				$('#header').slideDown(200);
-			}
-			if (currentpage == 4) {
-				$('.bottom_tag2').css('display', 'none')
-			}else{
-				$('.bottom_tag2').css('display', 'block')
-			}
-			page1();
-			page2();
-			page3();
-			page4();
-			setTimeout(function(){
-				onoff = true;
-			} , 300)
 		})
-		$('#header li').css('borderBottom' , '');
-		$('#header li').eq(n).css('borderBottom' , ' 5px solid #F3F8F1');
-	}
-
-	//第一屏内部动画
-	function page1 () {	
-		if (currentpage == 1) {
-			$('#ability').animate({'left' : 130}, 1000, 'easeOutBounce')
-		}else{
-			$('#ability').removeAttr('style');
+		//mouseScroll事件的封装，包括方法与兼容性封装
+		//2015.12.2 17:10 objlong007
+		//obj: 鼠标滚轮事件触发的元素； fn1： 滚轮上滚触发的函数； fn2： 滚轮下衮触发的函数；
+		function mouseScroll (obj, fn1, fn2) {
+			obj.onmousewheel = fn;
+			if (obj.addEventListener) {
+				obj.addEventListener('DOMMouseScroll', fn, false)
+			}
+			function fn (ev) {
+				var e = ev || event;
+				var detail;
+				if (e.wheelDelta) {
+					detail = e.wheelDelta > 0 ? true : false;
+				}else{
+					detail = e.detail < 0 ? true : false;
+				}
+				if (detail) {
+					fn1 && fn1.call(obj, e);
+				}else{
+					fn2 && fn2.call(obj, e);
+				}
+				if (e.preventDefault) {
+					e.preventDefault();
+				}
+				return false;
+			}
 		}
-	}
 
-	//第二屏内部动画
-	function page2 () {
-		if (currentpage == 2) {
-			$('#line1').animate({'height' : '10%'}, 'fast', function (){
-				$('#line2').animate({'width' : 740}, 'fast', function (){
-					$('.line3').animate({'height' : '15%'}, 'fast', function (){
-						$('.works').fadeIn('fast')
+		//页面跳转函数
+		//2015.12.1 15:10 objlong007
+		//n : 按钮索引值n = 需要显示的当前页索引值 - 1
+		function turnpage (n) {
+			currentpage = n + 1;
+
+			var marginTop = -$('.page').height() * currentpage;
+			$('#container').animate({'marginTop' : marginTop} ,1000, 'easeInOutExpo', function  () {
+				if ($('#header').css('display') == 'none') {
+					$('#header').slideDown(200);
+				}
+				if (currentpage == 4) {
+					$('.bottom_tag2').css('display', 'none')
+				}else{
+					$('.bottom_tag2').css('display', 'block')
+				}
+				page1();
+				page2();
+				page3();
+				page4();
+				setTimeout(function(){
+					onoff = true;
+				} , 300)
+			})
+			$('#header li').css('borderBottom' , '');
+			$('#header li').eq(n).css('borderBottom' , ' 5px solid #F3F8F1');
+		}
+
+		//第一屏内部动画
+		function page1 () {	
+			if (currentpage == 1) {
+				$('#ability').animate({'left' : 130}, 1000, 'easeOutBounce')
+			}else{
+				$('#ability').removeAttr('style');
+			}
+		}
+
+		//第二屏内部动画
+		function page2 () {
+			if (currentpage == 2) {
+				$('#line1').animate({'height' : '10%'}, 'fast', function (){
+					$('#line2').animate({'width' : 740}, 'fast', function (){
+						$('.line3').animate({'height' : '15%'}, 'fast', function (){
+							$('.works').fadeIn('fast')
+						})
 					})
 				})
-			})
-		}else{
-			$('#line1, #line2, .line3, .works,.works p').removeAttr('style');
+			}else{
+				$('#line1, #line2, .line3, .works,.works p').removeAttr('style');
+			}
 		}
-	}
-	$('.works').on({
-		'mouseenter' : function (){
-			if ($('.works').css('display') == 'block') {
-				var i = $(this).index('.works');
-				$('.works p').eq(i).animate({'top' : 0}, 'fast')
-			};
-		},
-		'mouseleave' : function (){
-			if ($('.works').css('display') == 'block') {
-				var j = $(this).index('.works');
-				$('.works p').eq(j).animate({'top' : 210})
-			};
-		}
-	})
-	//第三屏动画
-	function page3 (){
-		if (currentpage == 3) {
-			var h = 0;
-			var timer = null;
-			$('.rocket').css('display', 'block');
-			timer = setInterval(function (){
-				h += 1;
-				$('.combat').css('height', h + '%');
-				if (h == 50) {
-					$('#practice1').animate({'left' : 25}, 100)
-				}
-				if (h == 80) {
-					$('#practice2').animate({'right' : 25}, 100)
-				}
-				if (h == 100) {
-					clearInterval(timer);
+		$('.works').on({
+			'mouseenter' : function (){
+				if ($('.works').css('display') == 'block') {
+					var i = $(this).index('.works');
+					$('.works p').eq(i).animate({'top' : 0}, 'fast')
 				};
-			},15)
-		}else{
-			$('.rocket, .combat, #practice1, #practice2').removeAttr('style');
+			},
+			'mouseleave' : function (){
+				if ($('.works').css('display') == 'block') {
+					var j = $(this).index('.works');
+					$('.works p').eq(j).animate({'top' : 210})
+				};
+			}
+		})
+		//第三屏动画
+		function page3 (){
+			if (currentpage == 3) {
+				var h = 0;
+				var timer = null;
+				$('.rocket').css('display', 'block');
+				timer = setInterval(function (){
+					h += 1;
+					$('.combat').css('height', h + '%');
+					if (h == 50) {
+						$('#practice1').animate({'left' : 25}, 100)
+					}
+					if (h == 80) {
+						$('#practice2').animate({'right' : 25}, 100)
+					}
+					if (h == 100) {
+						clearInterval(timer);
+					};
+				},15)
+			}else{
+				$('.rocket, .combat, #practice1, #practice2').removeAttr('style');
+			}
 		}
-	}
 
-	//第四屏动画
-	function page4 (){
-		if (currentpage == 4) {
-			$('#inform1').addClass('active');
-			setTimeout(function (){
-				$('#personal_introduce').css('display', 'block')
-			},300)
-		}else{
-			$('#inform1').removeClass('active');
-			$('#personal_introduce').removeAttr('style')
+		//第四屏动画
+		function page4 (){
+			if (currentpage == 4) {
+				$('#inform1').addClass('active');
+				setTimeout(function (){
+					$('#personal_introduce').css('display', 'block')
+				},300)
+			}else{
+				$('#inform1').removeClass('active');
+				$('#personal_introduce').removeAttr('style')
+			}
 		}
-	}
-</script>
+	</script>
+</body>
+</html>
